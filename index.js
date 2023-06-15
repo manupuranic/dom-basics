@@ -10,10 +10,25 @@ titles[0].style.color = "green";
 
 // Assignment 4: GetElementByClassName
 // 1. get the array of elements having class name = "list-group-item"
+// let items = document.getElementsByClassName("list-group-item");
+// // 2. make the third element of the list to have green background color
+// items[2].style.backgroundColor = "green";
+// // 3. make all the elements in the list to have bold font
+// for (let i = 0; i < items.length; i++) {
+//   items[i].style.fontWeight = "bold";
+// }
+
+// Assignment 5 getElementByTagName
+// Using getElementByClassName
 let items = document.getElementsByClassName("list-group-item");
-// 2. make the third element of the list to have green background color
-items[2].style.backgroundColor = "green";
-// 3. make all the elements in the list to have bold font
+items[2].style.color = "green";
 for (let i = 0; i < items.length; i++) {
   items[i].style.fontWeight = "bold";
+}
+
+// Using getElementsByTagName
+let li = document.getElementsByTagName("li");
+li[3].style.color = "orange";
+for (let i = 0; i < li.length; i++) {
+  li[i].style.backgroundColor = "#ccc";
 }
