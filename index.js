@@ -34,16 +34,57 @@
 // }
 
 // Assignment 6 querySelector & querySelectorAll
-let secondItem = document.querySelector("li:nth-child(2)");
-secondItem.style.backgroundColor = "Green";
+// let secondItem = document.querySelector("li:nth-child(2)");
+// secondItem.style.backgroundColor = "Green";
 
-let thirdItem = document.querySelector("li:nth-child(3)");
-thirdItem.style.visibility = "hidden";
+// let thirdItem = document.querySelector("li:nth-child(3)");
+// thirdItem.style.visibility = "hidden";
 
-let li = document.querySelectorAll("li");
-li[1].style.color = "green";
+// let li = document.querySelectorAll("li");
+// li[1].style.color = "green";
 
-let odd = document.querySelectorAll("li:nth-child(odd)");
-for (let i = 0; i < odd.length; i++) {
-  odd[i].style.backgroundColor = "green";
-}
+// let odd = document.querySelectorAll("li:nth-child(odd)");
+// for (let i = 0; i < odd.length; i++) {
+//   odd[i].style.backgroundColor = "green";
+// }
+
+// let itemList = document.querySelector("#items");
+// itemList.parentElement.style.backgroundColor = "#f4f4f4";
+
+// itemList.children[1].style.backgroundColor = "lightgreen";
+
+// console.log(itemList.firstChild);
+// itemList.firstElementChild.textContent = "Hello";
+// console.log(itemList.lastChild);
+// itemList.lastElementChild.textContent = "World";
+
+// console.log(itemList.nextSibling);
+// console.log(itemList.nextElementSibling);
+
+// console.log(itemList.previousSibling);
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color = "red";
+
+let newDiv = document.createElement("div");
+
+newDiv.className = "welcome";
+
+newDiv.id = "hello";
+
+newDiv.setAttribute("title", "hello Div");
+
+let newTextNode = document.createTextNode("Hello");
+
+newDiv.appendChild(newTextNode);
+
+console.log(newDiv);
+
+let container = document.querySelector("header .container");
+let h1 = document.querySelector("header h1");
+
+container.insertBefore(newDiv, h1);
+
+let itemList = document.querySelector("#items");
+let item1 = itemList.firstElementChild;
+
+itemList.insertBefore(newDiv, item1);
